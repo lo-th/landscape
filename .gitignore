@@ -1,0 +1,7 @@
+prepa
+*.sh
+desktop.ini
+package-lock.json
+node_modules
+src
+dev.html
