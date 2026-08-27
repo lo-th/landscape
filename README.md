@@ -5,8 +5,8 @@ three.js experimental landscape<br>
 ### About
 
 No AI, source is hide for the moment.<br>
-Generator use pieces erosion shader.<br>
-Render use three.js webgpu and tsl.<br><br>
+Generator use pieces erosion shader of Skovbo Johansen<br>
+Render use three.js webgpu and tsl. (gl2 backend work)<br><br>
 
 Have lots of ideas for the next version,<br> 
 if you enjoy the project help by sponsoring.<br>
