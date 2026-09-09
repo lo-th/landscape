@@ -4,6 +4,7 @@
   "description": "three.js landscape",
   "scripts": {
     "build": "rollup -c \"rollup_config.js\"",
+    "build2": "rollup -c \"rollup2_config.js\"",
     "start": "http-server ./ -c-1 -a localhost -p 8522 -o ./index.html"
   },
   "author": "lo_th",
