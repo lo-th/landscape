@@ -1,6 +1,6 @@
 {
   "name": "landscape",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "three.js landscape",
   "scripts": {
     "build": "rollup -c \"rollup_config.js\"",

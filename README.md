@@ -1,4 +1,4 @@
-# landscape 0.0.2
+# landscape 0.0.3
 three.js experimental landscape<br>
 [launch demo](https://lo-th.github.io/landscape/)<br><br>
 
