@@ -99,7 +99,7 @@
 
 
 
-				addModel0()
+				addModel2()
 
 			}
 
@@ -133,8 +133,8 @@
 		            }
 		        })
 
-		        model.scale.set(40,40,40)
-		        model.position.y = -30//.set(100,100,100)
+		       //model.scale.set(1,40,40)
+		       // model.position.y = -30//.set(100,100,100)
 
 
 		        scene.add( model );
@@ -165,8 +165,8 @@
 
 			async function init() {
 
-				camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 1, 20000 );
-				camera.position.set( 0, 0, 100 );
+				camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 0.1, 2000 );
+				camera.position.set( 0, 0.7, 2 );
 
 				scene = new THREE.Scene();
 
@@ -196,10 +196,12 @@
 				renderer.toneMappingExposure = 0.9;
 				renderer.inspector = new Inspector();
 				renderer.shadowMap.enabled = true;
-				renderer.shadowMap.type = THREE.PCFShadowMap;
+				//renderer.shadowMap.type = THREE.PCFShadowMap;
 				document.body.appendChild( renderer.domElement );
 
 				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.target.set(0,0.7,0)
+				controls.update();
 				//controls.maxPolarAngle = Math.PI / 2;
 				//controls.enableZoom = false;
 				//controls.enablePan = false;
@@ -208,38 +210,29 @@
 				sun = new THREE.DirectionalLight( 0xf6faf4, 2.0 );
 				sun.position.set(0,2,0)
 
-				sun.phi = 12
-				sun.theta = 0
-				sun.distance = 100;
+				//sun.phi = 12
+				//sun.theta = 0
+				//sun.distance = 100;
 
 				sun.castShadow = true;
 			    //sun.shadow.autoUpdate = false;
-			    const range = 50
-			    sun.shadow.mapSize.set( 1024, 1024 );
+			    const range = 2
+			    sun.shadow.mapSize.set( 2048, 2048 );
 			    sun.shadow.camera.near = 1;
-			    sun.shadow.camera.far = 200;
+			    sun.shadow.camera.far = 10;
 			    sun.shadow.camera.top = range;
 			    sun.shadow.camera.right = range;
 			    sun.shadow.camera.bottom = - range;
 			    sun.shadow.camera.left = - range;
-			    sun.shadow.camera.bias = -0.0005;
-			    sun.shadow.camera.radius = 4;
+			    //sun.shadow.camera.bias = -0.0005;
+			    //sun.shadow.camera.radius = 4;
+			    sun.target.position.y = 0.7
 				scene.add( sun, sun.target );
 
 				moon = new THREE.DirectionalLight( 0xaabbcc, 1.0 );
+				moon.target.position.y = 0.7
 				scene.add( moon, moon.target );
 
-				sun.orient = function(){
-					sun.position.setFromSphericalCoords(sun.distance, (sun.phi-90)*torad, sun.theta*torad )//.add(this.target.position);
-					sun.lookAt( sun.target.position )
-
-					moon.position.copy(sun.position).negate()
-					moon.lookAt( moon.target.position )
-
-					sun.shadow.needsUpdate = true;
-				}
-
-				sun.orient()
 
 				//scene.add( new THREE.CameraHelper( sun.shadow.camera ) );
 
