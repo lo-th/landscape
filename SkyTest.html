@@ -88,6 +88,17 @@
 
 				ui.add( sky.moon_phase, 'value', { rename:'moon phase', min:0.0, max:1, mode:m, precision:3,step:0.125, color:'#fff' } )
 
+				ui.add( sky, 'color_sky', { rename:'ground' } )
+				ui.add( sky, 'color_cloud', { rename:'cloud' } )
+				ui.add( sky, 'color_fog', { rename:'fog' } )
+				ui.add( sky, 'color_ground', { rename:'ground' } )
+
+
+				//ui.add( sky.c_ground, 'value', { rename:'ground', type:'color' } )
+
+
+
+
 				addModel0()
 
 			}
