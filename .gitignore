@@ -4,6 +4,8 @@ desktop.ini
 package-lock.json
 node_modules
 assets/textures/tmp
+skyTest.html
+SkyTest_base.html
 bundle
 src
 dev.html
