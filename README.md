@@ -1,4 +1,4 @@
-<a target='_blank' href='https://lo-th.github.io/landscape/'><img src="https://lo-th.github.io/landscape/assets/view.jpg"/></a><br>
+<a target='_blank' href='https://lo-th.github.io/landscape/'><img src="https://lo-th.github.io/landscape/assets/view.png"/></a><br>
 
 # landscape 0.0.6
 three.js experimental landscape<br>
